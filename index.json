@@ -1,0 +1,150 @@
+{
+  "format": 1,
+  "title": {
+    "en": "WSTKeQing2677 · DSH plugins",
+    "zh": "WSTKeQing2677 的 DSH 插件"
+  },
+  "description": {
+    "en": "Three small DSH plugins: fold long tool output, copy a whole turn, and watch the remaining context. All three are tested on DSH 0.2.1-rc.5 / Windows x64 / Web UI only, and install from pinned Git commits (no npm release).",
+    "zh": "三个 DSH 小插件：折叠长工具输出、整回合复制、上下文余量读数。三个都只在 DSH 0.2.1-rc.5 / Windows x64 / Web UI 上验证过，安装的是固定 commit 的 Git 检出（未发 npm）。"
+  },
+  "metadata": {
+    "categories": {
+      "context": {
+        "title": {
+          "en": "Context",
+          "zh": "上下文"
+        }
+      },
+      "ui": {
+        "title": {
+          "en": "Interface",
+          "zh": "界面"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-token-thrift",
+      "title": {
+        "en": "Token Thrift",
+        "zh": "token 节流"
+      },
+      "description": {
+        "en": "Folds oversized tool output (keeping head, tail, and every error line) and collapses byte-identical results, with the original spilled to disk and recoverable by path. -44.9% characters / -48.0% prompt tokens in a controlled A/B. Limits: verified only on DSH 0.2.1-rc.5 · Windows x64 · Web UI; installed from a pinned Git commit (no npm release); not yet tested on macOS or Linux.",
+        "zh": "折叠超长工具输出（保留头尾与全部报错行）、折叠逐字相同的重复结果；原文落盘、可按路径读回。受控 A/B 体积 -44.9%、prompt token -48.0%。 限制：仅在 DSH 0.2.1-rc.5 · Windows x64 · Web UI 上验证；安装的是固定 commit 的 Git 检出（未发 npm）；尚未在 macOS / Linux 测试。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIgogICAgIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEuNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIgogICAgIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iVG9rZW4gVGhyaWZ0Ij4KICA8cGF0aCBkPSJNNCA1aDE2IiAvPgogIDxwYXRoIGQ9Ik00IDE5aDE2IiAvPgogIDxwYXRoIGQ9Ik0xMiA4LjJ2Mi42IiAvPgogIDxwYXRoIGQ9Ik0xMiAxNS44di0yLjYiIC8+CiAgPHBhdGggZD0iTTkuNiAxMC40IDEyIDhsMi40IDIuNCIgLz4KICA8cGF0aCBkPSJNOS42IDEzLjYgMTIgMTZsMi40LTIuNCIgLz4KICA8cGF0aCBkPSJNNy41IDEyaDIiIG9wYWNpdHk9IjAuNDUiIC8+CiAgPHBhdGggZD0iTTE0LjUgMTJoMiIgb3BhY2l0eT0iMC40NSIgLz4KPC9zdmc+Cg==",
+      "author": "WSTKeQing2677",
+      "homepage": "https://github.com/WSTKeQing2677/dsh-token-thrift#readme",
+      "repository": {
+        "url": "https://github.com/WSTKeQing2677/dsh-token-thrift"
+      },
+      "metadata": {
+        "category": "context",
+        "keywords": [
+          "context",
+          "tokens",
+          "compaction",
+          "tool-output",
+          "dedupe"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.2",
+          "publishTimestamp": 1794059918,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/WSTKeQing2677/dsh-token-thrift.git",
+            "commit": "9b13caea715ef01abda86901bd046dc2f6880022"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-full-copy",
+      "title": {
+        "en": "Full Copy",
+        "zh": "完全复制"
+      },
+      "description": {
+        "en": "Adds one \"Copy full turn\" action above the reply action row: copies the turn's reasoning, response, and tool-call summaries as a single Markdown document. Limits: verified only on DSH 0.2.1-rc.5 · Windows x64 · Web UI; installed from a pinned Git commit (no npm release); not yet tested on macOS or Linux.",
+        "zh": "每条回复上方加一个「完全复制」：把该回合的思考、正文与工具调用摘要复制成一段 Markdown。 限制：仅在 DSH 0.2.1-rc.5 · Windows x64 · Web UI 上验证；安装的是固定 commit 的 Git 检出（未发 npm）；尚未在 macOS / Linux 测试。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkZ1bGwgY29weSI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxMjNhNjMiLz4KICA8cGF0aCBkPSJNMjIgMTJoMTNsMTEgMTF2MjVhNCA0IDAgMCAxLTQgNEgyMmE0IDQgMCAwIDEtNC00VjE2YTQgNCAwIDAgMSA0LTR6IiBmaWxsPSIjZWFmM2ZmIi8+CiAgPHBhdGggZD0iTTM1IDEydjlhMiAyIDAgMCAwIDIgMmg5eiIgZmlsbD0iIzljYzdmNSIvPgogIDxyZWN0IHg9IjI0IiB5PSIyOSIgd2lkdGg9IjE3IiBoZWlnaHQ9IjMiIHJ4PSIxLjUiIGZpbGw9IiMyZjZmYjIiLz4KICA8cmVjdCB4PSIyNCIgeT0iMzciIHdpZHRoPSIxMiIgaGVpZ2h0PSIzIiByeD0iMS41IiBmaWxsPSIjMmY2ZmIyIi8+CiAgPGNpcmNsZSBjeD0iNDQiIGN5PSI0NSIgcj0iMTEiIGZpbGw9IiMyZjhmNmIiLz4KICA8cGF0aCBkPSJNMzkgNDVsMy40IDMuNEw0OSA0MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K",
+      "author": "WSTKeQing2677",
+      "homepage": "https://github.com/WSTKeQing2677/dsh-full-copy#readme",
+      "repository": {
+        "url": "https://github.com/WSTKeQing2677/dsh-full-copy"
+      },
+      "metadata": {
+        "category": "ui",
+        "keywords": [
+          "clipboard",
+          "markdown",
+          "export",
+          "turn"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.2",
+          "publishTimestamp": 1794059879,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/WSTKeQing2677/dsh-full-copy.git",
+            "commit": "ffdb17aa4ef43027a2a2272be7ffab14e966ac36"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-context-meter",
+      "title": {
+        "en": "Context Meter",
+        "zh": "上下文余量"
+      },
+      "description": {
+        "en": "Keeps one compact reading in the composer: how far the auto-compaction threshold and the hard context limit still are, with five bands that say when to start a new session. Limits: verified only on DSH 0.2.1-rc.5 · Windows x64 · Web UI; installed from a pinned Git commit (no npm release); not yet tested on macOS or Linux.",
+        "zh": "输入框内常驻一行：距自动压缩、距上下文硬上限还剩多少；五档提示何时该开新会话。 限制：仅在 DSH 0.2.1-rc.5 · Windows x64 · Web UI 上验证；安装的是固定 commit 的 Git 检出（未发 npm）；尚未在 macOS / Linux 测试。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNvbnRleHQgbWV0ZXIiPgogIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0IiBmaWxsPSIjMWQyYjNhIi8+CiAgPHBhdGggZD0iTTE0IDQyYTE4IDE4IDAgMCAxIDM2IDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzNjNTU2ZSIgc3Ryb2tlLXdpZHRoPSI2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMTQgNDJhMTggMTggMCAwIDEgMTMuNC0xNy4zIiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZmQwYTgiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTQ1LjYgMjcuNkExOCAxOCAwIDAgMSA1MCA0MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjA4YTZhIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0zMiA0Mmw4LjUtOS41IiBmaWxsPSJub25lIiBzdHJva2U9IiNlZWY2ZmYiIHN0cm9rZS13aWR0aD0iMy41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjQyIiByPSIzLjYiIGZpbGw9IiNlZWY2ZmYiLz4KICA8cmVjdCB4PSIxNyIgeT0iNDciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzIiByeD0iMS41IiBmaWxsPSIjMmEzZjU1Ii8+Cjwvc3ZnPgo=",
+      "author": "WSTKeQing2677",
+      "homepage": "https://github.com/WSTKeQing2677/dsh-context-meter#readme",
+      "repository": {
+        "url": "https://github.com/WSTKeQing2677/dsh-context-meter"
+      },
+      "metadata": {
+        "category": "context",
+        "keywords": [
+          "context",
+          "compaction",
+          "usage",
+          "composer"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.2",
+          "publishTimestamp": 1794059819,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/WSTKeQing2677/dsh-context-meter.git",
+            "commit": "969f61bfacc95db4aef866ae239a609556e4e367"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5"
+          }
+        }
+      ]
+    }
+  ]
+}
